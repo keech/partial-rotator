@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#container{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	</style>
+	<script type="text/javascript" src="PartialRotator.js"></script>
+	<script type="text/javascript">
+	window.onload = function(){
+		var img = document.getElementById('targetImg');
+		var partialRotater = new PartialRotator(img, {
+			centerX: +img.style.left + 100,
+			centerY: +img.style.top + 140,
+			radius: 50,
+			rotateType: 'circle',
+			direction: 'right',
+			angle: 90
+		});
+	};
+	</script>
+</head>
+<body>
+	<div id="container">
+		<img id="targetImg" src="_rat_f_0.png">
+	</div>
+</body>
+</html>
